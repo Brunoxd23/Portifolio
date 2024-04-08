@@ -92,6 +92,7 @@ main #banner .banner-image {
   border-radius: 50%;
   width: 100%;
   max-width: 300px;
+  border: solid 3px #fff;
 }
 
 main #banner .banner-content .banner-content-title {
