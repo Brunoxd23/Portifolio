@@ -1,0 +1,339 @@
+/* Coloque seu CSS aqui */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Heebo", sans-serif;
+}
+
+body {
+  background-color: #f7ebeb;
+}
+
+header {
+  background-color: #fff;
+}
+
+header #navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80px;
+}
+
+header #navbar .nav-brand {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+header #navbar .nav-brand:hover {
+  color: #00a8cc;
+  transition: color 0.5s;
+}
+
+header #navbar .nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+header #navbar .nav-list .nav-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+header #navbar .nav-list .nav-item a:hover {
+  color: #00a8cc;
+  transition: color 0.5s;
+}
+
+header #navbar .hamburger-menu {
+  display: none;
+}
+
+@media (max-width: 740px) {
+  header #navbar .hamburger-menu {
+    display: block;
+  }
+  header #navbar .nav-list {
+    display: none;
+  }
+}
+
+main {
+  margin-top: 6rem;
+}
+
+main #banner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+main #banner .banner-image {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 300px;
+}
+
+main #banner .banner-content .banner-content-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 60px;
+  margin-bottom: 40px;
+}
+
+main #banner .banner-content .banner-content-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 500px;
+  margin-bottom: 38px;
+}
+
+
+main #banner .banner-content .banner-content-btn {
+  background-color: #00a8cc;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 2px;
+  padding: 8px 24px;
+  border: none;
+}
+
+.main #banner .banner-content .banner-content-btn:hover {
+  color: #000000;
+  transition: color 0.5s;
+}
+
+.main #banner .banner-image {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 300px;
+}
+
+.banner-content-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+}
+
+.banner-content-btn:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  transition: width 3.1s ease;
+}
+
+.banner-content-btn:hover:after {
+  width: 0%;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-icon {
+  width: 57px;
+  height: 33px;
+  display: block;
+}
+
+.menu-icon path {
+  fill: #008fff;
+  transition: fill 0.3s ease;
+}
+
+.menu-icon.closed path:nth-child(1),
+.menu-icon.closed path:nth-child(3) {
+  fill: #008fff;
+}
+
+.menu-icon.closed path:nth-child(2),
+.menu-icon.closed path:nth-child(4) {
+  fill: transparent;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  transition: left 0.6s ease;
+}
+
+.menu.open {
+  left: 0;
+}
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 920px) {
+  main #banner {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
+  main #banner .banner-content {
+    text-align: center;
+  }
+}
+
+/* SECTION POSTS */
+
+section#posts {
+  margin-top: 71px;
+  background-color: #bcdee99c;
+  padding: 11px;
+}
+
+#posts .posts-content {
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#posts .posts-content .posts-content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+#posts .posts-content .posts-content-header .section-title {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+#posts .posts-content .posts-content-header .view-all-link {
+  text-decoration: none;
+  color: #1241a5;
+}
+
+#posts .posts-content .posts-cards {
+  display: flex;
+  gap: 2rem;
+}
+
+#posts .posts-content .posts-cards .posts-card {
+  background-color: #fff;
+  padding: 24px;
+}
+
+#posts .posts-content .posts-cards .posts-card h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 37px;
+}
+
+#posts .posts-content .posts-cards .posts-card span {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  display: block;
+}
+
+@media (max-width: 740px) {
+  #posts .posts-content .posts-cards {
+    flex-direction: column;
+  }
+.menu-list{
+  text-align: center;
+  margin-top: 5rem;
+}
+  .menu {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+    background-color: #f7f7f7eb;
+    transition: left 0.6s ease;
+  }
+
+  .menu-list a {
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    align-items: center;
+    padding: 10px;
+    color: #000000;
+  }
+}
+
+/* Adicione estas regras para ajustar o menu quando aberto */
+
+.menu.open {
+  display: block;
+  width: 70%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.menu {
+  overflow-y: auto; /* Permitir rolar o conteúdo do menu se ele for maior que a tela */
+}
+
+.menu.open .nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.menu.open .nav-item {
+  margin-bottom: 20px;
+}
+
+.menu.open .nav-item a {
+  font-size: 24px;
+}
+
+.close-menu {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
