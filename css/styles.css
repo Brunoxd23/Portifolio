@@ -274,8 +274,9 @@ section#posts {
     flex-direction: column;
   }
 .menu-list{
-  text-align: center;
   margin-top: 5rem;
+  margin-left: 25px;
+  list-style: none;
 }
   .menu {
     font-size: 1.5rem;
